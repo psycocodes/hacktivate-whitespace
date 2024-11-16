@@ -35,7 +35,7 @@ const NavBar = ({ fixed }: { fixed: boolean }) => {
       }`}
     >
       <div className="p-3 px-8 flex items-center justify-center">
-        <Image src="/images/logo-alt.png" width={30} height={30} alt="Logo" />
+        <Image src="/images/logo.png" width={30} height={30} alt="Logo" />
         <h1 className="bg-gradient-to-b from-gray-100 to-neutral-400 inline-block text-transparent bg-clip-text font-bold text-2xl ml-3">Hacktivate</h1>
       </div>
       <div className="p-3 px-5">
