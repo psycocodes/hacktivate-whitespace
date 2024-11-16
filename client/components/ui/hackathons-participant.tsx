@@ -101,7 +101,7 @@ const HackathonCard: React.FC<HackathonCardProps> = ({ hackathon }) => (
         ))}
       </div>
       <Button size="sm" className="w-full sm:w-auto group-hover:translate-x-1 transition-transform">
-        View Details
+        Details
         <ArrowRight className="w-4 h-4 ml-2" />
       </Button>
     </CardFooter>

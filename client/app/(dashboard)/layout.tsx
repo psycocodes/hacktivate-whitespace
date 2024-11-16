@@ -20,31 +20,24 @@ export default function DashboardPage({
 }>) {
   const links = [
     {
-      label: "Dashboard",
-      href: "/dashboard",
+      label: "Hackathons",
+      href: "/hackathons",
       icon: (
         <IconBrandTabler className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
       label: "Profile",
-      href: "/dashboard/profile",
+      href: "/profile",
       icon: (
         <IconUserBolt className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
       label: "Settings",
-      href: "/dashboard/settings",
+      href: "/settings",
       icon: (
         <IconSettings className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
-      ),
-    },
-    {
-      label: "Your Hackathons",
-      href: "/dashboard/hackathons",
-      icon: (
-        <IconWorldCode className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
@@ -76,11 +69,11 @@ export default function DashboardPage({
           <div>
             <SidebarLink
               link={{
-                label: "Manu Arora",
-                href: "#",
+                label: "Agnij Dutta",
+                href: "/profile",
                 icon: (
                   <Image
-                    src="/logo.svg"
+                    src="/images/agnij-pfp.jpg"
                     className="h-7 w-7 flex-shrink-0 rounded-full"
                     width={50}
                     height={50}
