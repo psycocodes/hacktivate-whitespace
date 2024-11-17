@@ -30,7 +30,7 @@ const NavBar = ({ fixed }: { fixed: boolean }) => {
   }
   return (
     <div
-      className={`flex items-center justify-between bg-stone-900/20 backdrop-blur-sm border-b border-stone-700/50 ${
+      className={`flex items-center justify-between bg-stone-900/20 backdrop-blur-sm border-b border-stone-700/50 z-50 ${
         fixed ? "fixed top-0 left-0 w-full z-10" : ""
       }`}
     >
@@ -44,6 +44,7 @@ const NavBar = ({ fixed }: { fixed: boolean }) => {
             key={index}
             href={item.href}
             className={setLinkStyles(item.href)}
+            style={{ hover: { backgroundColor: "rgba(219, 164, 67, 0.2)" } }}
           >
             {item.name}
           </Link>

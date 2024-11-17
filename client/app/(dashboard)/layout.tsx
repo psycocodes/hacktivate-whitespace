@@ -12,12 +12,37 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import React, { useState } from "react";
 import { cn } from "@/lib/utils";
+import { Badge } from '@/components/ui/badge';
+
 
 export default function DashboardPage({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const userProfile = {
+    name: "John Doe",
+    username: "@john-doe",
+    email: "john.doe@example.com",
+    type: "Participant",
+    resumeScore: 70,
+    github: "github.com/john-doe",
+    linkedin: "linkedin.com/in/john-doe",
+    hackathons: [
+      {
+        name: "Global Hackathon",
+        position: "3rd Place",
+        project: "InnovateX",
+        date: "February 2023"
+      },
+      {
+        name: "TechFest",
+        position: "Finalist",
+        project: "Smart Home App",
+        date: "December 2022"
+      }
+    ]
+  };
   const links = [
     {
       label: "Hackathons",
@@ -66,7 +91,7 @@ export default function DashboardPage({
               ))}
             </div>
           </div>
-          <div>
+          <div className="flex flex-col">
             <SidebarLink
               link={{
                 label: "Agnij Dutta",
@@ -81,7 +106,18 @@ export default function DashboardPage({
                   />
                 ),
               }}
-            />
+            >
+
+            </SidebarLink>
+            {open && userProfile.type === "Organiser" ? (
+              <Badge variant="default" className=" h-4 w-[85px]">
+                Organiser
+              </Badge>
+            ) : open ? (
+              <Badge variant="default" className="h-4 w-[85px]">
+                Participant
+              </Badge>
+            ) : null}
           </div>
         </SidebarBody>
       </Sidebar>

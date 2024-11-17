@@ -1,2 +1,2 @@
-const Links = [ 'Docs', 'Team', 'Get Started'] // Home is default
+const Links = [ 'Docs', 'About', 'Get Started'] // Home is default
 export default Links
