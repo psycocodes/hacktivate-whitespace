@@ -57,12 +57,12 @@ export default function RootLayout({
       <body
         className={` ${interAlt.className} ${centauriDefault.variable} ${geistSans.variable} ${geistMono.variable} ${inter.variable} ${interItalic.variable} ${BlackOpsOne.variable} antialiased dark`}
       >
-                <section className="grid w-screen h-screen bg-slate-950 grid-rows-[auto_1fr] no-scrollbar">
+                <section className="grid w-screen h-screen bg-gray-950 grid-rows-[auto_1fr] no-scrollbar">
         <header className="h-full z-50">
             <NavBar fixed={false}></NavBar>
           </header>
           <main className="grid overflow-hidden">
-            <div className="bg-slate-950 overflow-y-auto no-scrollbar">
+            <div className="bg-gray-950 overflow-y-auto no-scrollbar">
                 {children}
             </div>
           </main>

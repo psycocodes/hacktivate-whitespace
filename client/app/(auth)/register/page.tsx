@@ -12,6 +12,8 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { redirect } from 'next/navigation'
+
 import {
   SelectValue,
   SelectTrigger,
@@ -19,6 +21,7 @@ import {
   SelectItem,
   Select,
 } from "@/components/ui/select";
+import Link from "next/link";
 
 const formSchema = z
   .object({
@@ -65,6 +68,7 @@ export default function Home() {
 
   const handleSubmit = (values: z.infer<typeof formSchema>) => {
     console.log({ values });
+    redirect('/docs')
   };
 
   return (
@@ -168,7 +172,11 @@ export default function Home() {
             }}
           />
           <Button type="submit" className="w-full">
-            Register
+            <Link href="/hackathons">
+              <Button type="submit" className="w-full">
+                Register
+              </Button>
+            </Link>
           </Button>
         </form>
       </Form>
