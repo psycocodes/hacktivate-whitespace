@@ -37,8 +37,8 @@ const inter = localFont({
   variable: "--font-inter",
 })
 export const metadata: Metadata = {
-  title: "Naval Vanguard",
-  description: "Military Software for the Naval Forces",
+  title: "Hacktivate",
+  description: "Hackathons made easy",
 };
 
 
