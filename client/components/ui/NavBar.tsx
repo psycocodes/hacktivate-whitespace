@@ -44,7 +44,6 @@ const NavBar = ({ fixed }: { fixed: boolean }) => {
             key={index}
             href={item.href}
             className={setLinkStyles(item.href)}
-            style={{ hover: { backgroundColor: "rgba(219, 164, 67, 0.2)" } }}
           >
             {item.name}
           </Link>
