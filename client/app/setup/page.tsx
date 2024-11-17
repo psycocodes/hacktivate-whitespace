@@ -2,6 +2,7 @@
 import * as z from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import Link from "next/link";
 import {
   Form,
   FormControl,
@@ -14,14 +15,13 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 
-const formSchema = z
-  .object({
-    firstName: z.string().min(1),
-    lastName: z.string().min(1),
-    linkedin: z.string().url(),
-    github: z.string().url(),
-    resume: z.optional(z.instanceof(File)),
-  });
+const formSchema = z.object({
+  firstName: z.string().min(1),
+  lastName: z.string().min(1),
+  linkedin: z.string().url(),
+  github: z.string().url(),
+  resume: z.optional(z.instanceof(File)),
+});
 
 export default function Home() {
   const form = useForm<z.infer<typeof formSchema>>({
@@ -115,21 +115,21 @@ export default function Home() {
                   <FormLabel>Resume (PDF)</FormLabel>
                   <FormControl>
                     <div className="grid w-full max-w-sm items-center gap-1.5">
-                      <Label htmlFor="picture">Picture</Label>
                       <Input id="picture" type="file" />
                     </div>
                   </FormControl>
                   <FormMessage />
-           </FormItem>
+                </FormItem>
               );
             }}
           />
-          <Button type="submit" className="w-full">
-            Save
-          </Button>
+          <Link href="/hackathons">
+            <Button type="submit" className="w-full">
+              Save
+            </Button>
+          </Link>
         </form>
       </Form>
     </main>
   );
-}     
-
+}

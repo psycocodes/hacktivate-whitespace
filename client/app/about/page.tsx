@@ -107,7 +107,7 @@ const TeamPage = () => {
         <Card className="w-full">
           <CardHeader>
             <CardTitle>Suparno Saha</CardTitle>
-            <CardDescription>Data Analyst</CardDescription>
+            <CardDescription>Backend Developer</CardDescription>
           </CardHeader>
           <CardContent>
             <Image
